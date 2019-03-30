@@ -16,14 +16,26 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var trainings = HistoryList(lapHistory = ArrayList())
+        trainings.add(1)
+        trainings.add(4)
+        trainings.add(2)
+        trainings.add(3)
+
         var listView = findViewById<ListView>(R.id.list_item)
         val adapter = ArrayAdapter(this,android.R.layout.simple_list_item_1,trainings.lapHistory)
+        listView.adapter = adapter
 
-        val eraseButton = findViewById<Button>(R.id.button2)
-        eraseButton.setOnClickListener{
+        val nextButton = findViewById<Button>(R.id.button2)
+        nextButton.setOnClickListener{
             val intent = Intent(this, SecondActivity::class.java)
             startActivity(intent)
         }
+
+        val eraseButton = findViewById<Button>(R.id.button)
+        eraseButton.setOnClickListener{
+            trainings.add(34)
+            trainings.lapHistory.clear()
+            }
     }
 
 }

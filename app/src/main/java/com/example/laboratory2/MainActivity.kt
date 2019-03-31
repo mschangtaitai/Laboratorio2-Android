@@ -31,11 +31,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val eraseButton = findViewById<Button>(R.id.button)
+        val eraseButton = findViewById<Button>(R.id.deleteButton)
         eraseButton.setOnClickListener{
-            trainings.add(34)
-            trainings.lapHistory.clear()
-            }
+            trainings.del(0)
+        }
     }
-
 }

@@ -17,14 +17,6 @@
             android:layout_marginStart="8dp" app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintVertical_bias="0.708"/>
     <Button
-            android:text="Eliminar Historial"
-            android:layout_width="wrap_content"
-            android:layout_height="51dp"
-            android:id="@+id/button" android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/logoImage" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
-            />
-    <Button
             android:text="Nuevo Entreno"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,5 +31,12 @@
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
             style="@style/Widget.AppCompat.ListView"/>
+    <Button
+            android:text="Eliminar Historial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteButton" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/list_item"/>
 
 </android.support.constraint.ConstraintLayout>
